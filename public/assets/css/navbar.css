@@ -1,0 +1,106 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #dea8d7;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: lab(100% 0.01 -0.01);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3e3e3e;
+  margin-right: 30px; /* Logo ile menü arası boşluk */
+}
+
+.logo img {
+  height: 100px; /* Logo yüksekliği */
+  width: auto; /* Orantılı genişlik */
+  transition: transform 0.3s ease;
+}
+/* Menü öğeleri (logonun sağında yatay) */
+.nav-links {
+  display: flex;
+  gap: 24px;    
+  flex: 1;
+  justify-content: center;              
+}
+
+.nav-links a {
+  display: flex;
+  gap: 20px;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #560c2f;
+  transition: color 0.3s ease;
+  font-weight: 500;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links a:hover {
+  color: #a15e91;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Dil butonları için stil */
+.language-btn {
+  background-color: #8e24aa;
+  border: none;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.language-btn:hover {
+  background-color: #a15e91;
+}
+
+.language-btn.active {
+  background-color: #560c2f;
+  cursor: default;
+}
+
+/* İstersen contact-btn hover kaldırdım çünkü o yok, sen ekleyebilirsin */
+.contact-btn:hover {
+  background: #2c1823;
+}
+
+.language-switch {
+  padding: 4px;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center; /* İstersen center, istersen space-between */
+  }
+}

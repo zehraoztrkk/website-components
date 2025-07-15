@@ -3,20 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <title>Website Components - Anasayfa</title>
-  <link rel="stylesheet" href="../../public/assets/css/style.css" />
+
+  <!-- Navbar CSS (önceden yüklenmeli) -->
+  <link rel="stylesheet" href="../components/navbar/navbar.css">
+
+  <!-- Genel stiller -->
+  <link rel="stylesheet" href="../../public/assets/css/style.css">
+  <link rel="icon" href="../../public/assets/images/favicon.png">
+
+  <!-- Navbar JS -->
+  <script src="../components/navbar/navbar.js" defer></script>
 </head>
 <body>
-  <h1>Website Components Projesi</h1>
-  <p>Her bileşeni ayrı HTML sayfasında test etmek için aşağıdaki bağlantıları kullan:</p>
 
-  <ul>
-    <li><a href="navbar.html">Navbar</a></li>
-    <li><a href="footer.html">Footer</a></li>
-    <li><a href="product-card.html">Ürün Kartı</a></li>
-    <li><a href="faq.html">Sık Sorulan Sorular (FAQ)</a></li>
-    <li><a href="contact.html">İletişim Formu</a></li>
-    <li><a href="testimonials.html">Kullanıcı Yorumları</a></li>
-    <li><a href="credit-card.html">Kredi Kartı Formu</a></li>
-  </ul>
+  <!-- ✅ Navbar buraya dinamik olarak yüklenecek -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Sayfa içeriği -->
+  <main>
+    <h1>Website Components Projesi</h1>
+    <p>Her bileşeni ayrı HTML sayfasında test etmek için aşağıdaki bağlantıları kullan:</p>
+
+    <ul>
+      <li><a href="navbar.html">Navbar</a></li>
+      <li><a href="footer.html">Footer</a></li>
+      <li><a href="product-card.html">Ürün Kartı</a></li>
+      <li><a href="faq-section.html">Sık Sorulan Sorular (FAQ)</a></li>
+      <li><a href="contact-section.html">İletişim Formu</a></li>
+      <li><a href="testimonials-section.html">Kullanıcı Yorumları</a></li>
+      <li><a href="credit-card.html">Kredi Kartı Formu</a></li>
+    </ul>
+  </main>
+
+  <!-- ✅ Navbar HTML içeriğini yükle -->
+  <script>
+    fetch("../components/navbar/navbar.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
+  </script>
 </body>
 </html>
