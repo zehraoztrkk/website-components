@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Card Carousel</title>
+  <link rel="stylesheet" href="../../public/assets/product-card.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="product-card" id="productCard">
+    <div class="card-image">
+      <img src="../../public/images/bag2.jpg" id="mainImage" class="product-image main" alt="Product Image" />
+      <div class="thumbnail-container">
+        <img src="../../public/images/bag2.jpg" class="thumbnail active" />
+        <img src="../../public/images/bag3.jpg" class="thumbnail" />
+        <img src="../../public/images/bag4.jpg" class="thumbnail" />
+        <img src="../../public/images/bag1.jpg" class="thumbnail" />
+      </div>
+    </div>
+    <div class="card-content">
+      <h3 class="product-title">miumiu brown bag</h3>
+      <p class="product-price">$8000</p>
+      <button class="add-to-cart"><i class="bx bx-cart"></i> Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Ürün Özellikleri</h2>
+      <ul>
+        <li>Omuz çantası olarak kullanılabilen süet saplar</li>
+        <li>Çıkarılabilir deri ip</li>
+        <li>Altın tonlu donanım</li>
+        <li>Çanta ayakları ile</li>
+        <li>Fermuarlı cep ve yama cebi bulunan pamuk astar</li>
+        <li>Önde kabartmalı harf logolu</li>
+        <li>Ürün koruma bandı açılmış ürünlerde iade alınmamaktadır</li>
+      </ul>
+      <p><strong>Ürün Kodu:</strong> 81910325047226054203579822843_208</p>
+    </div>
+  </div>
+
+  <script src="/src/components/product-card/product-card.js"></script>
+</body>
+</html>
