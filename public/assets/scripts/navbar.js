@@ -19,14 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   languageButtons.forEach(button => {
     button.addEventListener('click', () => {
-      // Aktif butonu ayarla
       languageButtons.forEach(btn => btn.classList.remove('active'));
       button.classList.add('active');
 
-      // Seçilen dili al
+      
       const selectedLang = button.textContent.toLowerCase();
 
-      // Menü başlıklarını güncelle
+    
       navLinks.forEach(link => {
         const key = link.getAttribute('data-key');
         link.textContent = translations[selectedLang][key];
