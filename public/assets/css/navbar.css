@@ -1,17 +1,9 @@
-/* Genel Ayarlar */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
 body {
   background-color: #f4f4f4;
   color: #333;
 }
 
-/* Navbar */
+
 .navbar {
   position: sticky;
   top: 0;
@@ -23,11 +15,11 @@ body {
   padding: 12px 24px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   flex-wrap: nowrap;
-  white-space: nowrap; /* Metinlerin satır kırmasını engelle */
-  overflow-x: auto;  /* Taşma olursa yatay kaydırma çıksın */
+  white-space: nowrap;
+  overflow-x: auto;  
 }
 
-/* Logo */
+
 .logo img {
   height: 60px;
   width: auto;
@@ -37,20 +29,20 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
   color: #3e3e3e;
-  margin-right: 20px; /* Logo ile menü arası boşluk */
-  flex-shrink: 0; /* Logo küçülmesin */
+  margin-right: 20px; 
+  flex-shrink: 0;
 }
 
-/* Navigation Links */
+
 .nav-links {
   display: flex;
-  flex-direction: row; /* Yatay dizilmesi için */
-  gap: 24px;            /* Linkler arası boşluk */
+  flex-direction: row; 
+  gap: 24px;           
   justify-content: flex-start;
   align-items: center;
   flex-grow: 1;
   flex-wrap: nowrap !important;
-  white-space: nowrap;  /* Linklerin satır kırmasını engelle */
+  white-space: nowrap;
 }
 
 .nav-links a {
@@ -65,7 +57,7 @@ body {
   color: #a15e91;
 }
 
-/* Language buttons */
+
 .nav-actions {
   display: flex;
   align-items: center;
@@ -93,7 +85,7 @@ body {
   color: #fff;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
