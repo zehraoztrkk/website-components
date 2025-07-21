@@ -71,7 +71,7 @@ body {
   line-height: 1.5;
 }
 
-/* RESPONSIVE TASARIM */
+
 @media (max-width: 768px) {
   body {
     padding: 10px;
