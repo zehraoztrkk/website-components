@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Credit Card Form</title>
+  <link rel="stylesheet" href="../../public/assets/css/credit-card.css" />
+</head>
+<body>
+  <div class="card-wrapper">
+    <div class="card-container">
+      <div class="credit-card" id="credit-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="card-logo">VISA</div>
+            <div class="card-number" id="card-number-display">#### #### #### ####</div>
+            <div class="card-name-exp">
+              <span id="card-name-display">AD SOYAD</span>
+              <span id="card-exp-display">MM/YY</span>
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="black-strip"></div>
+            <div class="cvv-box">CVV: <span id="card-cvv-display">•••</span></div>
+          </div>
+        </div>
+      </div>
+
+      <form class="card-form">
+        <label>Kart Numarası</label>
+        <input type="text" id="card-number" maxlength="19" placeholder="#### #### #### ####" />
+
+        <label>Ad Soyad</label>
+        <input type="text" id="card-name" placeholder="Ad Soyad" />
+
+        <label>Son Kullanma Tarihi</label>
+        <input type="text" id="card-exp" maxlength="5" placeholder="MM/YY" />
+
+        <label>CVV</label>
+        <input type="text" id="card-cvv" maxlength="3" placeholder="CVV" />
+      </form>
+    </div>
+  </div>
+
+  <script src="../../public/assets/scripts/credit-card.js"></script>
+</body>
+</html>
