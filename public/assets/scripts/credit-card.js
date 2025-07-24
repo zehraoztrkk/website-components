@@ -1,45 +1,75 @@
-const card = document.getElementById("credit-card");
-const cardInner = document.querySelector(".card-inner");
-const numberInput = document.getElementById("card-number");
-const nameInput = document.getElementById("card-name");
-const expInput = document.getElementById("card-exp");
-const cvvInput = document.getElementById("card-cvv");
+const cardNumberInput = document.getElementById('card-number');
+const cardNameInput = document.getElementById('card-name');
+const cardExpInput = document.getElementById('card-exp');
+const cardCvvInput = document.getElementById('card-cvv');
 
-const numberDisplay = document.getElementById("card-number-display");
-const nameDisplay = document.getElementById("card-name-display");
-const expDisplay = document.getElementById("card-exp-display");
-const cvvDisplay = document.getElementById("card-cvv-display");
+const cardNumberDisplay = document.getElementById('card-number-display');
+const cardNameDisplay = document.getElementById('card-name-display');
+const cardExpDisplay = document.getElementById('card-exp-display');
+const cardCvvDisplay = document.getElementById('card-cvv-display');
 
-numberInput.addEventListener("input", () => {
-  let value = numberInput.value.replace(/\D/g, "").slice(0, 16);
-  value = value.replace(/(.{4})/g, "$1 ").trim();
-  numberInput.value = value;
-  numberDisplay.textContent = value || "#### #### #### ####";
+const creditCard = document.getElementById('credit-card');
+
+cardNumberInput.addEventListener('input', () => {
+  let value = cardNumberInput.value.replace(/\D/g, '').substring(0, 16);
+  value = value.replace(/(.{4})/g, '$1 ').trim();
+  cardNumberInput.value = value;
+  cardNumberDisplay.textContent = value || '#### #### #### ####';
 });
 
-nameInput.addEventListener("input", () => {
-  nameDisplay.textContent = nameInput.value || "AD SOYAD";
+
+cardNameInput.addEventListener('input', () => {
+
+  let value = cardNameInput.value.replace(/[^a-zA-ZğüşöçİĞÜŞÖÇ\s'-]/g, '');
+
+  value = value
+    .toLowerCase()
+    .replace(/(^|\s|'|-)([a-zğüşöç])/g, (match, p1, p2) => p1 + p2.toUpperCase());
+
+  cardNameInput.value = value;
+  cardNameDisplay.textContent = value || 'AD SOYAD';
+});
+cardNameInput.addEventListener('input', () => {
+  let value = cardNameInput.value.replace(/[^a-zA-ZğüşöçİĞÜŞÖÇ\s'-]/g, '');
+
+  value = value
+    .toLowerCase()
+    .replace(/(^|\s|'|-)([a-zğüşöç])/g, (match, p1, p2) => p1 + p2.toUpperCase());
+
+  cardNameInput.value = value;
+  cardNameDisplay.textContent = value || 'AD SOYAD';
 });
 
-expInput.addEventListener("input", () => {
-  let value = expInput.value.replace(/\D/g, "").slice(0, 4);
+
+
+cardExpInput.addEventListener('input', () => {
+  let value = cardExpInput.value.replace(/\D/g, '').substring(0, 4);
   if (value.length > 2) {
-    value = value.slice(0, 2) + "/" + value.slice(2);
+    value = value.replace(/(\d{2})(\d{1,2})/, '$1/$2');
   }
-  expInput.value = value;
-  expDisplay.textContent = value || "MM/YY";
+  cardExpInput.value = value;
+  cardExpDisplay.textContent = value || 'MM/YY';
 });
 
-cvvInput.addEventListener("focus", () => {
-  cardInner.style.transform = "rotateY(180deg)";
+cardCvvInput.addEventListener('focus', () => {
+  creditCard.classList.add('flipped');
 });
 
-cvvInput.addEventListener("blur", () => {
-  cardInner.style.transform = "rotateY(0deg)";
+cardCvvInput.addEventListener('blur', () => {
+  creditCard.classList.remove('flipped');
 });
 
-cvvInput.addEventListener("input", () => {
-  let value = cvvInput.value.replace(/\D/g, "").slice(0, 3);
-  cvvInput.value = value;
-  cvvDisplay.textContent = value || "•••";
+cardCvvInput.addEventListener('input', () => {
+  let value = cardCvvInput.value.replace(/\D/g, '').substring(0, 3);
+  cardCvvInput.value = value;
+
+  if (value.length === 0) {
+    cardCvvDisplay.textContent = '•••';
+  } else if (value.length === 1) {
+    cardCvvDisplay.textContent = '••' + value.charAt(0);
+  } else if (value.length === 2) {
+    cardCvvDisplay.textContent = '•' + value.slice(0, 2);
+  } else {
+    cardCvvDisplay.textContent = value;
+  }
 });
