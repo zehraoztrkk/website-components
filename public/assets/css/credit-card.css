@@ -45,7 +45,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  transform-style: preserve-3d; /* 👈 bu önemli */
+  transform-style: preserve-3d; 
   transition: transform 0.8s ease;
 }
 
