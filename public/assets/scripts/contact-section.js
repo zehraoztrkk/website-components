@@ -1,6 +1,4 @@
-// contact-section.js
-
-const fontAwesomeKit = "a076d05399"; // Kendi Font Awesome kit kodun
+const fontAwesomeKit = "a076d05399"; 
 
 const script = document.createElement("script");
 script.src = `https://kit.fontawesome.com/${fontAwesomeKit}.js`;
