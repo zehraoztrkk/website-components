@@ -1,0 +1,71 @@
+[33mcommit 8857c2e56c2559d401b593e40a477f29a9c09c86[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/ui-refactor[m[33m, [m[1;31morigin/feature/ui-refactor[m[33m)[m
+Author: zehraoztrkk <zehraoztrk00@gmail.com>
+Date:   Tue Jul 29 17:41:10 2025 +0300
+
+    fix: adjust star icon space
+
+[1mdiff --git a/src/pages/testimonial-section.html b/src/pages/testimonial-section.html[m
+[1mindex 37c87bb..282fd0f 100644[m
+[1m--- a/src/pages/testimonial-section.html[m
+[1m+++ b/src/pages/testimonial-section.html[m
+[36m@@ -7,6 +7,14 @@[m
+   <link rel="stylesheet" href="../../public/assets/css/testimonial-section.css" />[m
+   <link rel="stylesheet"[m
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>[m
+[32m+[m[32m  <style>[m
+[32m+[m[32m    .stars i {[m
+[32m+[m[32m      margin-right: 4px;[m
+[32m+[m[32m    }[m
+[32m+[m[32m    .stars i:last-child {[m
+[32m+[m[32m      margin-right: 0;[m
+[32m+[m[32m    }[m
+[32m+[m[32m  </style>[m
+ </head>[m
+ <body>[m
+ [m
+[36m@@ -19,8 +27,10 @@[m
+         <h3>Ayşe Yıldız</h3>[m
+         <p>"Bence ürün f/p ürünü. Ablam almanya köln longchamp mağazasından lacivert rengini almıştı. Karşılaştırdım ve en çok fark askılarıydı onun dışında pek göze batan bir farkları yok. Memnun kalırsınız ve tercih edebilirsiniz. Satıcı da oldukça ilgiliydi."</p>[m
+         <div class="stars">[m
+[31m-          <i class="fas fa-star"></i><i class="fas fa-star"></i>[m
+[31m-          <i class="fas fa-star"></i><i class="fas fa-star"></i>[m
+[32m+[m[32m          <i class="fas fa-star"></i>[m
+[32m+[m[32m          <i class="fas fa-star"></i>[m
+[32m+[m[32m          <i class="fas fa-star"></i>[m
+[32m+[m[32m          <i class="fas fa-star"></i>[m
+           <i class="fas fa-star-half-alt"></i>[m
+         </div>[m
+       </div>[m
+[36m@@ -30,8 +40,10 @@[m
+         <h3>Mehmet Can</h3>[m
+         <p>"Aklında soru işareti kalanlar için detaylıca ekledim. İçinde etiketide mevcut satıcıdan m boy istemiştim m geldi ama üniversite çantası olarak kullanmak güç, icine stanley zar zor sığıyor başkada bir şey alamıyor, sadece tablet sigar o kadar, normal bi ders kitabida tam olarak sığmıyor o yüzden dersleriniz ve kullandığınız kitaplar çoksa bence L beden almanız daha mantıklı olur. Pişman değilim çünkü bu boy günlük kullanımada uygun ama L alsamsa pişman olmazmışım. Kısacası ben  memnun kaldım iç dış olarak güzel ama yoğun bi plastik kokusu var o da kullandıkça gecicek die düşünüyorum orjinalina o kadar para vermektense bu tarz çantalarda çakma almak daha makul geliyor bana"</p>[m
+         <div class="stars">[m
+[31m-          <i class="fas fa-star"></i><i class="fas fa-star"></i>[m
+[31m-          <i class="fas fa-star"></i><i class="fas fa-star"></i>[m
+[32m+[m[32m          <i class="fas fa-star"></i>[m
+[32m+[m[32m          <i class="fas fa-star"></i>[m
+[32m+[m[32m          <i class="fas fa-star"></i>[m
+[32m+[m[32m          <i class="fas fa-star"></i>[m
+           <i class="fas fa-star"></i>[m
+         </div>[m
+       </div>[m
+[36m@@ -41,8 +53,10 @@[m
+         <h3>Elif Kara</h3>[m
+         <p>"Ürüne bayıldım satıcıyla iletişime geçtim ve M beden yollayabilirler mi diye sordum süreçle ilgilendiler her sorduğuma cevap verdiler çok teşekkürler. Ürüne ve kalitesine bayıldım günlük için istiyorsanız L çok büyük gelir bence M en güzeli. Orijinal gibi duruyor müthiş 🥹🩷🩷🩷🩷🩷"</p>[m
+         <div class="stars">[m
+[31m-          <i class="fas fa-star"></i><i class="fas fa-star"></i>[m
+[31m-          <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>[m
+[32m+[m[32m          <i class="fas fa-star"></i>[m
+[32m+[m[32m          <i class="fas fa-star"></i>[m
+[32m+[m[32m          <i class="fas fa-star"></i>[m
+[32m+[m[32m          <i class="fas fa-star-half-alt"></i>[m
+           <i class="far fa-star"></i>[m
+         </div>[m
+       </div>[m
+[36m@@ -50,6 +64,5 @@[m
+     </div>[m
+   </section>[m
+ [m
+[31m-[m
+ </body>[m
+ </html>[m
