@@ -1,8 +1,8 @@
 const mainImage = document.getElementById('mainImage');
 const thumbnails = document.querySelectorAll('.thumbnail');
-const productCard = document.getElementById('productCard');
 const modal = document.getElementById('productModal');
 const closeBtn = document.querySelector('.close');
+const showInfoBtn = document.querySelector('.show-info');
 
 thumbnails.forEach((thumb) => {
   thumb.addEventListener('click', (e) => {
@@ -13,9 +13,12 @@ thumbnails.forEach((thumb) => {
   });
 });
 
-productCard.addEventListener('click', () => {
+
+showInfoBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
   modal.style.display = 'block';
 });
+
 
 closeBtn.addEventListener('click', () => {
   modal.style.display = 'none';

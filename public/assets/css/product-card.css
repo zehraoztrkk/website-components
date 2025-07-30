@@ -118,3 +118,41 @@ body {
 .close:hover {
   color: #000;
 }
+.cart-message {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  font-size: 14px;
+  animation: fadeInOut 3s forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; display: none; }
+}
+
+.add-to-cart,
+.show-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #6eb47b;
+  color: white;
+  padding: 10px 16px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover,
+.show-info:hover {
+  background-color: #4a54e1;
+}

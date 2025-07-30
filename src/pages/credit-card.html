@@ -26,17 +26,18 @@
         </div>
       </div>
 
-      <form class="card-form">
-        <label>Kart Numarası</label>
+      <!-- Form Alanı -->
+      <form class="card-form" method="post" action="#" novalidate>
+        <label for="card-number">Kart Numarası</label>
         <input type="text" id="card-number" maxlength="19" placeholder="#### #### #### ####" />
 
-        <label>Ad Soyad</label>
+        <label for="card-name">Ad Soyad</label>
         <input type="text" id="card-name" placeholder="Ad Soyad" />
 
-        <label>Son Kullanma Tarihi</label>
+        <label for="card-exp">Son Kullanma Tarihi</label>
         <input type="text" id="card-exp" maxlength="5" placeholder="MM/YY" />
 
-        <label>CVV</label>
+        <label for="card-cvv">CVV</label>
         <input type="text" id="card-cvv" maxlength="3" placeholder="CVV" />
       </form>
     </div>
