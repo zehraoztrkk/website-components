@@ -22,7 +22,7 @@ body {
 }
 
 .accordion-item {
-  border-bottom: 6px dotted #638dc2;
+  border-bottom: 6px  #638dc2;
   margin-block-end: 30px;
   position: relative;
 }
@@ -48,8 +48,16 @@ body {
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 20px;
-  transition: transform 0.3s ease;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background-color: #638dc2;
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
 .accordion-header.active::after {
@@ -60,17 +68,32 @@ body {
 .accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.5s ease, opacity 0.5s ease, backdrop-filter 0.5s ease;
   padding: 0 15px;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.25); 
+  backdrop-filter: blur(10px); 
+  border-radius: 8px;
+  opacity: 0;
+  margin-top: 10px;
 }
 
-.accordion-content p {
-  margin: 15px 0;
-  font-size: 16px;
-  line-height: 1.5;
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+  padding: 0 15px;
+  background-color: rgba(100, 140, 194, 0.15); 
+  border-radius: 8px; 
+  box-shadow: 0 2px 8px rgba(9, 0, 0, 0.1); 
+  opacity: 0;
 }
 
+
+.accordion-header.active + .accordion-content {
+  max-height: 500px;
+  opacity: 1;
+  padding: 15px;
+}
 
 @media (max-width: 768px) {
   body {
@@ -96,7 +119,9 @@ body {
   }
 
   .accordion-header::after {
-    font-size: 18px;
+    font-size: 16px;
+    width: 22px;
+    height: 22px;
     right: 10px;
   }
 }
