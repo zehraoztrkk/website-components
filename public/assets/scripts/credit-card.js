@@ -39,6 +39,16 @@ cardNameInput.addEventListener('input', () => {
   cardNameInput.value = value;
   cardNameDisplay.textContent = value || 'AD SOYAD';
 });
+cardNameInput.addEventListener('input', () => {
+  let value = cardNameInput.value.replace(/[^a-zA-ZğüşöçİĞÜŞÖÇ\s'-]/g, '');
+
+  value = value
+    .toLowerCase()
+    .replace(/(^|\s|'|-)([a-zğüşöç])/g, (match, p1, p2) => p1 + p2.toUpperCase());
+
+  cardNameInput.value = value;
+  cardNameDisplay.textContent = value || 'AD SOYAD';
+});
 
 
 
